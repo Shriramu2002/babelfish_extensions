@@ -275,3 +275,7 @@ AS 'babelfishpg_tsql' LANGUAGE C;
 CREATE OR REPLACE PROCEDURE sys.sp_testlinkedserver(IN "@servername" sys.sysname)
 AS 'babelfishpg_tsql', 'sp_testlinkedserver_internal' LANGUAGE C;
 GRANT EXECUTE on PROCEDURE sys.sp_testlinkedserver(IN sys.sysname) TO PUBLIC;
+
+CREATE OR REPLACE PROCEDURE sys.sp_enum_oledb_providers()
+AS 'babelfish_tsql', 'sp_enum_oledb_providers' LANGUAGE C;
+GRANT EXECUTE on PROCEDURE sys.sp_enum_oledb_providers() TO PUBLIC;
